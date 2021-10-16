@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #9b59b6;
+}
+.email-signature {
+  width: 750px;
+  border-radius: 5px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  overflow: hidden;
+}
+.email-signature .image {
+  margin-right: 10px;
+}
+.email-signature .image p {
+  text-transform: capitalize;
+  color: #34495e;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+.email-signature .image img {
+  height: 200px;
+  width: 200px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.email-signature .content {
+  text-align: center;
+  padding-top: 20px;
+  position: relative;
+}
+.email-signature .content::before {
+  content: "";
+  position: absolute;
+  height: 7px;
+  width: 200px;
+  background: rgba(214, 48, 48, 0.5);
+  left: 0;
+  top: 5px;
+  border-radius: 5px;
+}
+
+.email-signature .content h1 {
+  text-transform: uppercase;
+  color: #95a5a6;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.email-signature .content h1 span {
+  color: #3498db;
+}
+.email-signature .content h3 {
+  text-transform: capitalize;
+  color: #34495e;
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.email-signature .content ul li {
+  text-align: left;
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  color: #2d3436;
+}
+.email-signature .content ul li span {
+  font-size: 18px;
+  margin: 0 5px 0 0;
+  color: #d63031;
+}
+.icons {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+.email-signature .content .icons a {
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 50%;
+  margin-left: 5px;
+  transition: all linear 0.4s;
+}
+.email-signature .content .icons a:hover {
+  background: #3498db;
+  color: #fff;
+}
+@media (max-width: 545px) {
+  .email-signature {
+    flex-flow: column;
+    justify-content: center;
+  }
+  .email-signature .image {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .email-signature .content {
+    text-align: left;
+  }
+  .email-signature .content h1 {
+    font-size: 26px;
+  }
+  .email-signature .content h3 {
+    font-size: 17px;
+  }
+}
